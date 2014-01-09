@@ -27,7 +27,7 @@
         <section id="main_content" class="inner">
             <p>Thank you. Thankyouverymuch!</p>
             <p><img src="images/elvis.jpg" width="300" height="225" /></p>
-            <p><span id="n">True</span> is awesome!</p>
+            <p id="n">True is awesome!</p>
             <p><a href="https://true.nl"><img src="images/logo_TRUE_on_dark_background_113x24.png" width="113" height="24"></a></p>
             <p>Enjoy the cake and have a nice day!</p>
         </section>
@@ -53,8 +53,8 @@
 
         $(document).ready(function () {
             var awesomepeople = 'Tess,Wim,Jan-Paul,Rafaël,Bas,Leander,Annechiene,Daniël,Pablo,Ron,Renan,Olaf,Nasir,Mathijs,Menno,Hans,Stefan,Jeroen,Remy,Bob,Raphaël,Sander,René,Dorus,Rudolf,Joost,Ranesh,Fahad,Kevin'.split(',');
-            function awesome(i, s, p) { $('#n').fadeOut(s, function () { $(this).text(awesomepeople[i % awesomepeople.length]).fadeIn(s, function () { setTimeout(function () { awesome(++i, s, p); }, p); }) }); }
-            awesome(0, 500, 1000);
+            function awesome(i, s, p) { $('#n').fadeOut(s, function () { $(this).text(awesomepeople[i % awesomepeople.length] + ' is awesome!').fadeIn(s, function () { setTimeout(function () { awesome(++i, s, p); }, p); }) }); }
+            awesome(0, 200, 1500);
         });
     </script>
 </body>
